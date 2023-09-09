@@ -1,0 +1,68 @@
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+
+      home: Scaffold(
+        appBar: AppBar(
+          toolbarHeight: 100,
+          backgroundColor: Colors.green,
+          title: Center(child: Text("Home")),
+          elevation: 70,
+          leading: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Icon(Icons.add_business),
+          ),
+          actions: [
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Icon(Icons.search),
+            )
+          ],
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          ///crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+
+            Row(
+
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('This is mod 5 Assignment')
+              ],
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('My ',style: TextStyle(
+                    color: Colors.red,fontSize: 18
+                ),),
+                Text('phone ',style: TextStyle(
+                    color: Colors.blue
+                ),),
+                Text('name ',style: TextStyle(
+                    color: Colors.purple
+                ),),
+                Text('Your phone name',style: TextStyle(
+                    color: Colors.amberAccent,fontSize: 22
+                ),),
+              ],
+            ),
+
+          ],
+        ),
+      ),
+    );
+  }
+}
